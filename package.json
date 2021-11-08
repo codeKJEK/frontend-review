@@ -1,14 +1,14 @@
 {
-  "name": "frontend",
+  "name": "reviews-frontend",
   "version": "1.0.0",
-  "description": "Frontend Quick Start",
+  "description": "Front-end development enviroment for customer reviews",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codeKJEK/frontend.git"
+    "url": "git+https://github.com/codeKJEK/reviews-frontend.git"
   },
   "keywords": [
     "frontend",
@@ -21,9 +21,9 @@
   "author": "Kurtis Kovel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/codeKJEK/frontend/issues"
+    "url": "https://github.com/codeKJEK/reviews-frontend/issues"
   },
-  "homepage": "https://github.com/codeKJEK/frontend#readme",
+  "homepage": "https://github.com/codeKJEK/reviews-frontend#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
