@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOXICON -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="dist/css/style.min.css">
-    <title>Document</title>
+    <title>Customer Reviews</title>
 </head>
+
 <body>
-    <h1>Hello world</h1>
+    <section class="reviews">
+        <header class="reviews__header">
+            <h3 class="reviews__title">Our reviews</h3>
+        </header>
+        <article class="reviews__article">
+            <div class="reviews__img-container">
+                <img src="https://via.placeholder.com/150" alt="placeholder image">
+            </div>
+            <h4 class="reviews__author-name">First Last</h4>
+            <p class="reviews__author-job">Job Title</p>
+            <p class="reviews__author-review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit reiciendis
+                reprehenderit ut nam repellendus eveniet labore aperiam dolorem perferendis quidem.</p>
+            <div class="review__button-container">
+                <button class="review__prev-button"><i class='bx bxs-chevron-left'></i></button>
+                <button class="review__next-button"><i class='bx bxs-chevron-right'></i></button>
+            </div>
+        </article>
+    </section>
     <script src="dist/js/scripts.min.js"></script>
 </body>
+
 </html>
