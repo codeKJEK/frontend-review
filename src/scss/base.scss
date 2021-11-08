@@ -1,1 +1,90 @@
 // base scss
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #0d0d0d;
+}
+
+.btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    cursor: pointer;
+    line-height: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.reviews {
+    padding: 1rem;
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    &__article {
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 5px 15px #bfbfbf;
+    }
+    &__title {
+        text-align: center;
+        font-size: 2em;
+        margin: .75rem 0 .75rem 0;
+    }
+    &__title-underline {
+        height: .25rem;
+        width: 4rem;
+        background-color: #808080;
+    }
+    &__img-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    &__author-img {
+        border-radius: 50%;
+    }
+    &__author-name, &__author-job {
+        text-align: center;
+    }
+    &__author-name {
+        margin: 0 0 .25rem 0;
+    }
+    &__author-job {
+        margin: 0 0 2rem 0;
+        font-size: .9em;
+        text-transform: uppercase;
+    }
+    &__author-review {
+        margin: 0 0 1rem 0;
+        line-height: 1.5rem;
+    }
+
+    &__button-container {
+        display: flex;
+        justify-content: center;
+        column-gap: 2rem;
+    }
+    &__prev-button, &__next-button {
+        display: flex;
+        align-items: center;
+    }
+    &__icon {
+        font-size: 2rem;
+    }
+}

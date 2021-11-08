@@ -44,7 +44,7 @@ function minifyJs() {
     return src("dist/js/scripts.js")
         .pipe(uglify())
         .pipe(rename({suffix: ".min"}))
-        .pipe(dest("dist"));
+        .pipe(dest("dist/js"));
 };
 
 function optimizeImg() {
