@@ -31,11 +31,11 @@ $breakpoint-desktop: 769px;
 $width-review: 704px;
 // height
 // - based on longest review text
-$height-review-default: 277px;
-$height-review-small: 317px;
-$height-review-medium: 245px;
-$height-review-tablet: 197px;
-$height-review-large: 177px;
+$height-container-default: 277px;
+$height-container-small: 317px;
+$height-container-medium: 245px;
+$height-container-tablet: 197px;
+$height-container-large: 177px;
 
 html, body {
     margin: 0;
@@ -113,7 +113,7 @@ body {
         display: flex;
         flex-direction: column;
         row-gap: .25rem;
-        min-height: $height-review-default;
+        min-height: $height-container-default;
     }
     &__author-name, &__author-job {
         margin: 0;
@@ -163,7 +163,7 @@ body {
             padding: 2rem;
         }
         &__text-container {
-            min-height: $height-review-small;
+            min-height: $height-container-small;
         }
         &__author-review {
             margin: 2rem 0 0 0;
@@ -173,14 +173,14 @@ body {
 @media screen and (min-width: $breakpoint-mobile-medium) {
     .review {
         &__text-container {
-            min-height: $height-review-medium;
+            min-height: $height-container-medium;
         }
     }
 }
 @media screen and (min-width: $breakpoint-mobile-large) {
     .review {
         &__text-container {
-            min-height: $height-review-tablet;
+            min-height: $height-container-tablet;
         }
     }
 }
@@ -193,7 +193,7 @@ body {
         width: $width-review;
         margin: 0 auto;
         &__text-container {
-            min-height: $height-review-large;
+            min-height: $height-container-large;
         }
     }
 }
