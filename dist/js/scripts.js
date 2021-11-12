@@ -11,9 +11,10 @@ var currentReview = 0;
 fetch("https://kjek-reviews.herokuapp.com/reviews").then(function (response) {
   return response.json();
 }).then(function (reviews) {
+  console.log(reviews);
   var review = reviews[currentReview];
   imageContainer.innerHTML = "";
-  imageContainer.insertAdjacentHTML("afterbegin", "<img src=\"".concat(review.imageURL, "\" alt=\"photo of ").concat(review.name, "\" class=\"review__author-img\">"));
+  imageContainer.insertAdjacentHTML("afterbegin", "<img src=\"".concat(review.image[0].url, "\" alt=\"photo of ").concat(review.name, "\" class=\"review__author-img\">"));
   authorName.textContent = review.name;
   authorJob.textContent = review.job;
   authorReview.textContent = review.review;
@@ -21,7 +22,7 @@ fetch("https://kjek-reviews.herokuapp.com/reviews").then(function (response) {
 
   function showReview(currentReview) {
     var review = reviews[currentReview];
-    authorImg.src = review.imageURL;
+    authorImg.src = review.image[0].url;
     authorImg.setAttribute("alt", "image of ".concat(review.name));
     authorName.textContent = review.name;
     authorJob.textContent = review.job;

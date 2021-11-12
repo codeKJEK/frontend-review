@@ -11,9 +11,10 @@ let currentReview = 0;
 fetch("https://kjek-reviews.herokuapp.com/reviews")
 .then(response => response.json())
 .then(reviews => {
+  console.log(reviews)
   const review = reviews[currentReview];
   imageContainer.innerHTML = "";
-  imageContainer.insertAdjacentHTML("afterbegin", `<img src="${review.imageURL}" alt="photo of ${review.name}" class="review__author-img">`);
+  imageContainer.insertAdjacentHTML("afterbegin", `<img src="${review.image[0].url}" alt="photo of ${review.name}" class="review__author-img">`);
   authorName.textContent = review.name;
   authorJob.textContent = review.job;
   authorReview.textContent = review.review;
@@ -21,7 +22,7 @@ fetch("https://kjek-reviews.herokuapp.com/reviews")
 
   function showReview(currentReview) {
     const review = reviews[currentReview];
-    authorImg.src = review.imageURL;
+    authorImg.src = review.image[0].url;
     authorImg.setAttribute("alt", `image of ${review.name}`);
     authorName.textContent = review.name;
     authorJob.textContent = review.job;
