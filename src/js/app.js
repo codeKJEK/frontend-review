@@ -1,5 +1,5 @@
 // app js
-const imageContainer = document.querySelector(".review__img-container"),
+const imageContainer = document.querySelector(".review__image-container"),
 authorName = document.querySelector(".review__author-name"),
 authorJob = document.querySelector(".review__author-job"),
 authorReview = document.querySelector(".review__author-review"),

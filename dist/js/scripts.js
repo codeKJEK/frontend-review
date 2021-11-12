@@ -1,7 +1,7 @@
 "use strict";
 
 // app js
-var imageContainer = document.querySelector(".review__img-container"),
+var imageContainer = document.querySelector(".review__image-container"),
     authorName = document.querySelector(".review__author-name"),
     authorJob = document.querySelector(".review__author-job"),
     authorReview = document.querySelector(".review__author-review"),

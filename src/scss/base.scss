@@ -94,7 +94,7 @@ body {
         width: 4rem;
         background-color: $color-underline;
     }
-    &__img-container {
+    &__image-container {
         display: flex;
         justify-content: center;
         margin-bottom: 1rem;
@@ -108,21 +108,24 @@ body {
         height: $size-author-image;
         width: $size-author-image;
     }
-    &__author-name, &__author-job, &__author-review {
+    &__text-container {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: .1rem;
+        min-height: 285px;
     }
-    &__author-name {
-        margin: 0 0 .25rem 0;
+    &__author-name, &__author-job {
+        margin: 0;
     }
     &__author-job {
-        margin: 0 0 1rem 0;
         font-size: .9em;
         text-transform: uppercase;
     }
     &__author-review {
-        margin: 0 0 1rem 0;
         line-height: 1.5rem;
-        min-height: $height-review-default;
+        margin: 2rem 0 0 0;
+        flex-grow: 1;
     }
 
     &__button-container {
@@ -156,33 +159,22 @@ body {
         &__article {
             padding: 2rem;
         }
-        &__author-job {
-            margin-bottom: 2rem;
-        }
-        &__author-review {
-            min-height: $height-review-small;
+        &__text-container {
+            min-height: 309px;
         }
     }
 }
-
 @media screen and (min-width: $breakpoint-mobile-medium) {
     .review {
-        &__author-review {
-            min-height: $height-review-medium;
+        &__text-container {
+            min-height: 237px;
         }
     }
 }
-@media screen and (min-width: $breakpoint-mobile-large) {
+@media screen and (min-width: 530px) {
     .review {
-        &__author-review {
-            min-height: $height-review-medium-mid;
-        }
-    }
-}
-@media screen and (min-width: $breakpoint-tablet-small) {
-    .review {
-        &__author-review {
-            min-height: $height-review-large;
+        &__text-container {
+            min-height: 189px;
         }
     }
 }
@@ -194,5 +186,8 @@ body {
     .review {
         width: $width-review;
         margin: 0 auto;
+        &__text-container {
+            min-height: 171px;
+        }
     }
 }

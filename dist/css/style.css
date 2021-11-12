@@ -56,7 +56,7 @@ body {
   width: 4rem;
   background-color: #808080;
 }
-.review__img-container {
+.review__image-container {
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
@@ -70,21 +70,24 @@ body {
   height: 150px;
   width: 150px;
 }
-.review__author-name, .review__author-job, .review__author-review {
+.review__text-container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.1rem;
+  min-height: 285px;
 }
-.review__author-name {
-  margin: 0 0 0.25rem 0;
+.review__author-name, .review__author-job {
+  margin: 0;
 }
 .review__author-job {
-  margin: 0 0 1rem 0;
   font-size: 0.9em;
   text-transform: uppercase;
 }
 .review__author-review {
-  margin: 0 0 1rem 0;
   line-height: 1.5rem;
-  min-height: 220px;
+  margin: 2rem 0 0 0;
+  flex-grow: 1;
 }
 .review__button-container {
   display: flex;
@@ -115,26 +118,18 @@ body {
   .review__article {
     padding: 2rem;
   }
-  .review__author-job {
-    margin-bottom: 2rem;
-  }
-  .review__author-review {
-    min-height: 243px;
+  .review__text-container {
+    min-height: 309px;
   }
 }
 @media screen and (min-width: 425px) {
-  .review__author-review {
-    min-height: 171px;
+  .review__text-container {
+    min-height: 237px;
   }
 }
 @media screen and (min-width: 530px) {
-  .review__author-review {
-    min-height: 123px;
-  }
-}
-@media screen and (min-width: 630px) {
-  .review__author-review {
-    min-height: 100px;
+  .review__text-container {
+    min-height: 189px;
   }
 }
 @media screen and (min-width: 769px) {
@@ -145,5 +140,8 @@ body {
   .review {
     width: 704px;
     margin: 0 auto;
+  }
+  .review__text-container {
+    min-height: 171px;
   }
 }
