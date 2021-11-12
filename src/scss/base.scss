@@ -31,11 +31,11 @@ $breakpoint-desktop: 769px;
 $width-review: 704px;
 // height
 // - based on longest review text
-$height-review-default: 285px;
-$height-review-small: 309px;
-$height-review-medium: 237px;
-$height-review-tablet: 189px;
-$height-review-large: 171px;
+$height-review-default: 277px;
+$height-review-small: 317px;
+$height-review-medium: 245px;
+$height-review-tablet: 197px;
+$height-review-large: 177px;
 
 html, body {
     margin: 0;
@@ -112,19 +112,22 @@ body {
         text-align: center;
         display: flex;
         flex-direction: column;
-        row-gap: .1rem;
+        row-gap: .25rem;
         min-height: $height-review-default;
     }
     &__author-name, &__author-job {
         margin: 0;
     }
+    &__author-name {
+        font-size: 1.25em;
+    }
     &__author-job {
-        font-size: .9em;
+        font-size: .75em;
         text-transform: uppercase;
     }
     &__author-review {
         line-height: 1.5rem;
-        margin: 2rem 0 0 0;
+        margin: 1rem 0 0 0;
         flex-grow: 1;
     }
 
@@ -161,6 +164,9 @@ body {
         }
         &__text-container {
             min-height: $height-review-small;
+        }
+        &__author-review {
+            margin: 2rem 0 0 0;
         }
     }
 }
