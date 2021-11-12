@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,23 +9,22 @@
     <link rel="stylesheet" href="dist/css/style.min.css">
     <title>Customer Reviews</title>
 </head>
-
 <body>
-    <section class="reviews">
-        <header class="reviews__header">
-            <h3 class="reviews__title">Our Reviews</h3>
-            <div class="reviews__title-underline"></div>
+    <section class="review" aria-labelledby="review-title">
+        <header class="review__header">
+            <h3 class="review__title" id="review-title">Our Reviews</h3>
+            <div class="review__title-underline"></div>
         </header>
-        <article class="reviews__article">
-            <div class="reviews__img-container">
-                <img src="dist/image/preloader.gif" alt="preloader image" class="reviews__preloader">
+        <article class="review__article" aria-labelledby="author-name" aria-live="polite">
+            <div class="review__img-container">
+                <img src="dist/image/preloader.gif" alt="preloader image" class="review__preloader">
             </div>
-            <h4 class="reviews__author-name">Please Wait...</h4>
-            <p class="reviews__author-job">Server is waking up</p>
-            <p class="reviews__author-review"></p>
-            <div class="reviews__button-container">
-                <button class="btn reviews__prev-button"><i class='bx bxs-chevron-left reviews__icon' title="previous review"></i></button>
-                <button class="btn reviews__next-button"><i class='bx bxs-chevron-right reviews__icon' title="next review"></i></button>
+            <h4 class="review__author-name" id="author-name">Please Wait...</h4>
+            <p class="review__author-job">Server is waking up</p>
+            <p class="review__author-review"></p>
+            <div class="review__button-container">
+                <button class="btn review__prev-button" aria-label="previous review"><i class='bx bxs-chevron-left review__icon' ></i></button>
+                <button class="btn review__next-button" aria-label="next review"><i class='bx bxs-chevron-right review__icon' ></i></button>
             </div>
         </article>
     </section>

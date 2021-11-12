@@ -57,7 +57,7 @@ function optimizeImg() {
 }
 
 function launchServer() {
-    return src("../reviews-frontend")
+    return src("../frontend-review")
         .pipe(webserver({
             livereload: true,
             port: "4000",

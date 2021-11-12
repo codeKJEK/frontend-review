@@ -1,4 +1,42 @@
-// base scss
+// VARIABLES
+// font size
+$font-size-mobile: 16px;
+$font-size-desktop: 18px;
+// background colors
+$color-background: #f2f2f2;
+$color-background-dark: #0d0d0d;
+$color-article: #ffffff;
+$color-article-dark: #000000;
+// font colors
+$color-font: #0d0d0d;
+$color-font-dark: #f2f2f2;
+$color-underline: #808080;
+// shadow colors
+$color-shadow: #bfbfbf;
+$color-shadow-dark: #000000;
+// box shadows
+$shadow: 0 5px 15px $color-shadow;
+$shadow-dark: 0 5px 15px $color-shadow-dark;
+// height and width
+$size-preloader: 100px;
+$size-author-image: 150px;
+// breakpoints
+$breakpoint-mobile-small: 375px;
+$breakpoint-mobile-medium: 425px;
+$breakpoint-mobile-large: 530px;
+$breakpoint-tablet-small: 630px;
+$breakpoint-desktop: 769px;
+// width 
+// - max width on desktop
+$width-review: 704px;
+// height
+// - based on longest review text + 10px
+$height-review-default: 220px;
+$height-review-small: 243px;
+$height-review-medium: 171px;
+$height-review-medium-mid: 123px;
+$height-review-large: 100px;
+
 html, body {
     margin: 0;
     padding: 0;
@@ -9,26 +47,31 @@ html {
 }
 
 body {
-    font-size: 16px;
+    font-size: $font-size-mobile;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
-    color: #0d0d0d;
+    background-color: $color-background;
+    color: $color-font;
 }
 
-.btn {
-    border: none;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-    cursor: pointer;
-    line-height: 0;
-    font-size: inherit;
-    font-family: inherit;
+.dark-mode {
+    background-color: $color-background-dark;
+    color: $color-font-dark;
 }
 
-.reviews {
+.review {
     padding: 1rem;
+    .btn {
+        border: none;
+        background: transparent;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        cursor: pointer;
+        line-height: 0;
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+    }
     &__header {
         display: flex;
         flex-direction: column;
@@ -36,10 +79,10 @@ body {
         margin-bottom: 2rem;
     }
     &__article {
-        background-color: #fff;
+        background-color: $color-article;
         padding: 1rem;
         border-radius: 1rem;
-        box-shadow: 0 5px 15px #bfbfbf;
+        box-shadow: $shadow;
     }
     &__title {
         text-align: center;
@@ -49,7 +92,7 @@ body {
     &__title-underline {
         height: .25rem;
         width: 4rem;
-        background-color: #808080;
+        background-color: $color-underline;
     }
     &__img-container {
         display: flex;
@@ -57,13 +100,13 @@ body {
         margin-bottom: 1rem;
     }
     &__preloader {
-        height: 100px;
-        width: 100px;
+        height: $size-preloader;
+        width: $size-preloader;
     }
     &__author-img {
         border-radius: 50%;
-        height: 150px;
-        width: 150px;
+        height: $size-author-image;
+        width: $size-author-image;
     }
     &__author-name, &__author-job, &__author-review {
         text-align: center;
@@ -79,7 +122,7 @@ body {
     &__author-review {
         margin: 0 0 1rem 0;
         line-height: 1.5rem;
-        min-height: 220px;
+        min-height: $height-review-default;
     }
 
     &__button-container {
@@ -87,7 +130,7 @@ body {
         justify-content: center;
         column-gap: 2rem;
     }
-    &__prev-button, &__next-button {
+    &__prev-button.btn, &__next-button.btn {
         display: flex;
         align-items: center;
         padding: .5rem;
@@ -97,8 +140,15 @@ body {
     }
 }
 
-@media screen and (min-width: 375px) {
-    .reviews {
+.dark-mode .review {
+    &__article {
+        background-color: $color-article-dark;
+        box-shadow: $shadow-dark;
+    }
+}
+
+@media screen and (min-width: $breakpoint-mobile-small) {
+    .review {
         padding: 1rem 2rem;
         &__header {
             margin-bottom: 3rem;
@@ -110,25 +160,39 @@ body {
             margin-bottom: 2rem;
         }
         &__author-review {
-            min-height: 243px;
+            min-height: $height-review-small;
         }
     }
 }
 
-@media screen and (min-width: 425px) {
-    .reviews {
+@media screen and (min-width: $breakpoint-mobile-medium) {
+    .review {
         &__author-review {
-            min-height: 171px;
+            min-height: $height-review-medium;
+        }
+    }
+}
+@media screen and (min-width: $breakpoint-mobile-large) {
+    .review {
+        &__author-review {
+            min-height: $height-review-medium-mid;
+        }
+    }
+}
+@media screen and (min-width: $breakpoint-tablet-small) {
+    .review {
+        &__author-review {
+            min-height: $height-review-large;
         }
     }
 }
 
-@media screen and (min-width: 768px) {
-    .reviews {
-        width: 704px;
+@media screen and (min-width: $breakpoint-desktop) {
+    body {
+        font-size: $font-size-desktop;
+    }
+    .review {
+        width: $width-review;
         margin: 0 auto;
-        &__author-review {
-            min-height: 100px;
-        }
     }
 }
